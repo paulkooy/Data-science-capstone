@@ -1,6 +1,11 @@
-# README
-Paul van der Kooy  
-12/30/2016  
+---
+title: "README"
+author: "Paul van der Kooy"
+date: "12/30/2016"
+output: 
+  html_document: 
+    keep_md: yes
+---
 # Data-science-capstone
 
 All code and documentation for the Coursera Data Sciences capstone project

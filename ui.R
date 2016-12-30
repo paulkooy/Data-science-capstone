@@ -26,8 +26,6 @@ shinyUI(fluidPage(
         # Show the predicted text plus prediction score
         mainPanel(
 
-            h4(textOutput("predictionScore")),
-            br(),
             h4(print(paste("The input text:"))),
             textOutput("outputText"),
             br(),

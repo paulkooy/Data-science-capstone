@@ -23,38 +23,38 @@ STARTSENT <- c("The", "A", "I", "It")
 tt <- as.Token_Tokenizer(wordpunct_tokenizer)
 #   Load up to 5-grams into memory for prediction and use 50% of the dataset (for best results)
 ngrams <- 5
-percentage <- 25
+percentage <- 05
 
 #   Load the n-grams to start the prediction algorithm
 #   Chop the n-grams to determine the optimal model input size
 #   Sort the n-grams on frequency and
 #   Cut off the low frequency tail at the specified percentage
-if (file.exists("../data/model/freq5gramsList.csv") && ngrams > 4) {
-    freq5grams <- read.csv(file = "../data/model/freq5gramsList.csv", row.names = 1)
+if (file.exists("freq5gramsList.csv") && ngrams > 4) {
+    freq5grams <- read.csv(file = "freq5gramsList.csv", row.names = 1)
     len5grams <- nrow(freq5grams)
     freq5gramsSorted <- arrange(freq5grams, desc(Frequency))
     freq5gramsSorted <- freq5gramsSorted[1:round(nrow(freq5gramsSorted)*percentage/100),]
     rm(freq5grams)
 }
 gc()
-if (file.exists("../data/model/freq4gramsList.csv") && ngrams > 3) {
-    freq4grams <- read.csv(file = "../data/model/freq4gramsList.csv", row.names = 1)
+if (file.exists("freq4gramsList.csv") && ngrams > 3) {
+    freq4grams <- read.csv(file = "freq4gramsList.csv", row.names = 1)
     len4grams <- nrow(freq4grams)
     freq4gramsSorted <- arrange(freq4grams, desc(Frequency))
     freq4gramsSorted <- freq4gramsSorted[1:round(nrow(freq4gramsSorted)*percentage/100),]
     rm(freq4grams)
 }
 gc()
-if (file.exists("../data/model/freq3gramsList.csv") && ngrams > 2) {
-    freq3grams <- read.csv(file = "../data/model/freq3gramsList.csv", row.names = 1)
+if (file.exists("freq3gramsList.csv") && ngrams > 2) {
+    freq3grams <- read.csv(file = "freq3gramsList.csv", row.names = 1)
     len3grams <- nrow(freq3grams)
     freq3gramsSorted <- arrange(freq3grams, desc(Frequency))
     freq3gramsSorted <- freq3gramsSorted[1:round(nrow(freq3gramsSorted)*percentage/100),]
     rm(freq3grams)
 }
 gc()
-if (file.exists("../data/model/freq2gramsList.csv") && ngrams > 1) {
-    freq2grams <- read.csv(file = "../data/model/freq2gramsList.csv", row.names = 1)
+if (file.exists("freq2gramsList.csv") && ngrams > 1) {
+    freq2grams <- read.csv(file = "freq2gramsList.csv", row.names = 1)
     len2grams <- nrow(freq2grams)
     freq2gramsSorted <- arrange(freq2grams, desc(Frequency))
     freq2gramsSorted <- freq2gramsSorted[1:round(nrow(freq2gramsSorted)*percentage/100),]
