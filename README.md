@@ -48,4 +48,4 @@ R-code to plot the results of the model testing
 
 Location App: <https://paulkooy.shinyapps.io/capstoneNLP/>  
 Location presentation data analytics: <http://rpubs.com/paulkooy/229890>  
-Location presentation of the App: <http://rpubs.com/paulkooy/238451>  
+Location presentation of the App: <http://rpubs.com/paulkooy/238540>  
